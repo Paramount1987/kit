@@ -219,7 +219,7 @@ tbody.collapse.in { display: table-row-group; }
 
 .nav-tabs { margin: 0 0 10px -20px; }
 .nav-tabs > li { display: inline-block; vertical-align: top; margin: 0 0 0 20px; }
-.nav-tabs > li > a { margin-right: 2px; border: 1px solid transparent; color: #4D4D4D; font-size: 16px; }
+.nav-tabs > li > a { margin-right: 2px; border: 1px solid transparent; color: #4D4D4D; font-size: 18px; }
 .nav-tabs > li > a:hover { color: #1B75AE; }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus { color: #1B75AE; font-family: "MuseoSansMedium"; cursor: default; }
 
@@ -333,7 +333,7 @@ tbody.collapse.in { display: table-row-group; }
 
 .owl-carousel .owl-wrapper-outer.autoHeight { -webkit-transition: height 500ms ease-in-out; -moz-transition: height 500ms ease-in-out; -ms-transition: height 500ms ease-in-out; -o-transition: height 500ms ease-in-out; transition: height 500ms ease-in-out; }
 
-.owl-carousel .owl-item { float: left; }
+.owl-carousel .owl-item { float: left; overflow: hidden; }
 
 .owl-controls .owl-page, .owl-controls .owl-buttons div { cursor: pointer; }
 
@@ -371,12 +371,12 @@ tbody.collapse.in { display: table-row-group; }
 /* preloading images */
 .owl-item.loading { min-height: 150px; background: url(AjaxLoader.gif) no-repeat center center; }
 
-#main-owl { height: 100%; min-height: 700px; }
+#main-owl { height: 100%; min-height: 760px; }
 #main-owl .owl-wrapper-outer, #main-owl .owl-wrapper, #main-owl .owl-item { height: 100%; }
 #main-owl .owl-item > div { position: relative; height: 100%; }
 #main-owl .owl-item > div:after { content: ""; position: absolute; z-index: 2; top: 0; left: 0; right: 0; bottom: 0; background: #003659; opacity: 0.7; filter: alpha(opacity=70); }
 
-#main-owl .slide-img { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; min-height: 100%; }
+#main-owl .slide-img { position: absolute; z-index: 1; top: 50%; left: 50%; min-width: 100%; min-height: 100%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 #main-owl .inner-slide { position: absolute; z-index: 3; width: 1000px; top: 50%; left: 50%; text-align: center; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 #main-owl .inner-slide h2 { position: relative; top: -40px; margin: 10px 0; font-family: "MuseoSansBold"; font-size: 54px; line-height: 60px; color: #fff; text-transform: uppercase; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
@@ -606,7 +606,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .works-type { position: relative; height: 600px; overflow: hidden; }
 
-.chema-list { position: absolute; left: 0; top: 150px; height: 100px; list-style-type: none; padding: 0; margin: 50px 0 30px -70px; text-align: left; white-space: nowrap; }
+.chema-list { position: absolute; left: 0; top: 150px; list-style-type: none; padding: 0; margin: 50px 0 30px -70px; text-align: left; white-space: nowrap; }
 .chema-list li { position: relative; display: inline-block; width: 265px; margin: 0 0 0 70px; text-align: center; vertical-align: top; color: #fff; white-space: normal; }
 .chema-list li h4 { margin: 5px 0; font-weight: normal; font-size: 16px; font-family: "MuseoSansMedium"; }
 .chema-list li p { margin: 5px 0; font-size: 14px; }
@@ -616,6 +616,10 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .chema-list li:after { content: ""; position: absolute; z-index: 10; top: 50px; right: -30px; width: 32px; height: 22px; background: url("../i/icons/arrow-right.svg") no-repeat; background-size: 32px 22px; }
 
 .chema-list li:last-child:after { display: none; }
+
+.chema-list li:first-child { margin-left: 250px; }
+
+.chema-list li:last-child { margin-right: 250px; }
 
 #header { position: absolute; z-index: 10; top: 40px; left: 50%; width: 1000px; padding: 0 10px; margin-left: -500px; }
 #header:before, #header:after { content: " "; display: table; }
