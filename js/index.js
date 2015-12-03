@@ -7,7 +7,17 @@ $("#main-owl").owlCarousel({
 	singleItem: true,
 	pagination: false,
 	navigation: true,
-  transitionStyle : "fadeUp"
+  transitionStyle : "fadeUp",
+  afterAction: function(elem){
+    var current = this.currentItem;
+    var prev = this.prevItem;
+
+    elem.find(".owl-item").eq(current).find(".inner-slide").addClass("active");
+
+    elem.find(".owl-item").eq(prev).find(".inner-slide").removeClass("active");
+    
+
+  }
 });
 ////////////////////////////////////////////end
 
@@ -90,6 +100,5 @@ $(".close-contacts").click(function(){
 if($( ".swipebox" ).length){
   $( ".swipebox" ).swipebox();
   }
-  
 
 });
