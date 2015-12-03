@@ -379,8 +379,8 @@ tbody.collapse.in { display: table-row-group; }
 #main-owl .slide-img { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; min-height: 100%; }
 
 #main-owl .inner-slide { position: absolute; z-index: 3; width: 1000px; top: 50%; left: 50%; text-align: center; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-#main-owl .inner-slide h2 { position: relative; top: -40px; margin: 10px 0; font-family: "MuseoSansBold"; font-size: 54px; line-height: 60px; color: #fff; text-transform: uppercase; -webkit-transition: all linear 1s; -o-transition: all linear 1s; transition: all linear 1s; }
-#main-owl .inner-slide h3 { position: relative; top: -40px; margin: 10px 0; font-size: 20px; font-weight: normal; color: #fff; -webkit-transition: all linear 1.1s; -o-transition: all linear 1.1s; transition: all linear 1.1s; }
+#main-owl .inner-slide h2 { position: relative; top: -40px; margin: 10px 0; font-family: "MuseoSansBold"; font-size: 54px; line-height: 60px; color: #fff; text-transform: uppercase; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
+#main-owl .inner-slide h3 { position: relative; top: -40px; margin: 10px 0; font-size: 20px; font-weight: normal; color: #fff; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
 
 #main-owl .inner-slide.active h2 { top: 0; }
 #main-owl .inner-slide.active h3 { top: 0; }
@@ -641,7 +641,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
   100% { top: 50px; } }
 .contacts-hide-wrap { position: fixed; z-index: -1; width: 700px; height: 100%; top: 0; right: 0; -webkit-transition: all ease 0.4s; -o-transition: all ease 0.4s; transition: all ease 0.4s; }
 
-.contacts-hide-wrap.active { z-index: 50; }
+.contacts-hide-wrap.active { z-index: 1150; overflow-y: auto; }
 .contacts-hide-wrap.active #contacts-hide { right: 0; }
 
 #contacts-hide { position: absolute; z-index: 50; top: 0; right: -710px; width: 700px; background: #4d4d4d; color: #fff; -webkit-transition: all ease 0.4s; -o-transition: all ease 0.4s; transition: all ease 0.4s; }
