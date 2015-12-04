@@ -800,9 +800,9 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .project-header-page img { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; }
 .project-header-page:before { content: ""; position: absolute; z-index: 3; top: 0; left: 0; bottom: 0; right: 0; background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%); background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%); background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC000000', endColorstr='#33000000', GradientType=0); }
 
-@media (min-width: 1300px) { .project-header-page { padding-bottom: 45%; } }
+@media (min-width: 1300px) { .project-header-page { padding-bottom: 52%; } }
 .project-header-page .container { position: absolute; z-index: 5; top: 50%; left: 50%; color: #fff; text-align: center; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-.project-header-page .container .title { margin: 0; color: #fff; font-family: "MuseoSansMedium"; font-size: 54px; line-height: 60px; text-transform: uppercase; }
+.project-header-page .container .title { margin: 0; color: #fff; font-family: "MuseoSansMedium"; font-size: 54px; line-height: 60px; }
 .project-header-page .container .text { font-size: 20px; }
 
 .gallery-list { list-style: none; padding: 0; margin: 0; font-size: 0; }
