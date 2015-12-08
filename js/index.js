@@ -100,5 +100,14 @@ $(".close-contacts").click(function(){
 if($( ".swipebox" ).length){
   $( ".swipebox" ).swipebox();
   }
+///////////////////////////////////////////link-projects
+$(".link-projects").click(function(e){
+
+  e.preventDefault();
+  $(".projects-list .none").slideDown(500);
+  $(".link-projects").animate({height: 0},200)
+
+});
+
 
 });
