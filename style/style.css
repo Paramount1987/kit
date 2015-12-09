@@ -652,9 +652,16 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .close-contacts { position: absolute; z-index: 10; top: 40px; right: 40px; width: 25px; height: 25px; background: url("../i/icons/x.svg") no-repeat; background-size: 25px 25px; cursor: pointer; }
 
-.contacts-header { position: relative; height: 335px; padding: 40px 10px 0 70px; background: url("../i/contact.png"); }
-.contacts-header address { font-size: 20px; line-height: 24px; font-style: normal; font-weight: normal; }
+.contacts-header { position: relative; height: 335px; padding: 40px 10px 0 70px; background: url("../i/map.jpg") no-repeat center; background-size: cover; }
+.contacts-header address { font-size: 19px; line-height: 24px; font-style: normal; font-weight: normal; }
 .contacts-header address a { color: #fff; text-decoration: none; }
+.contacts-header address a:hover { text-decoration: underline; }
+.contacts-header address .link-phone:hover, .contacts-header address .link-mail:hover { text-decoration: none; }
+
+.i-map { position: relative; }
+.i-map:after { content: ""; position: absolute; z-index: 10; top: -8px; right: -40px; width: 28px; height: 28px; background: url("../i/icons/map.svg") no-repeat; background-size: 28px 28px; }
+
+.i-map-2:after { right: -47px; }
 
 .contacts-body { padding: 20px 75px 100px 75px; text-align: center; }
 .contacts-body .title { margin: 20px 0; font-size: 43px; line-height: 46px; font-family: "MuseoSansMedium"; text-transform: uppercase; }
