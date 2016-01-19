@@ -1,3 +1,13 @@
+$(window).on('load', function () {
+  
+    var preloader = $('#page-preloader'),
+    spinner   = preloader.find('.spinner');
+    spinner.fadeOut();
+    preloader.fadeOut('slow');
+
+});
+
+
 $(document).ready(function(){
 
 /////////////////////////////////////////carousel
@@ -7,17 +17,18 @@ $("#main-owl").owlCarousel({
 	singleItem: true,
 	pagination: false,
 	navigation: true,
-  transitionStyle : "fadeUp",
-  afterAction: function(elem){
-    var current = this.currentItem;
-    var prev = this.prevItem;
+  autoPlay: true,
+  transitionStyle : "fadeUp"
+  // afterAction: function(elem){
+  //   var current = this.currentItem;
+  //   var prev = this.prevItem;
 
-    elem.find(".owl-item").eq(current).find(".inner-slide").addClass("active");
+  //   elem.find(".owl-item").eq(current).find(".inner-slide").addClass("active");
 
-    elem.find(".owl-item").eq(prev).find(".inner-slide").removeClass("active");
+  //   elem.find(".owl-item").eq(prev).find(".inner-slide").removeClass("active");
     
 
-  }
+  // }
 });
 ////////////////////////////////////////////end
 
@@ -62,11 +73,47 @@ function slider(){
 }
 slider();
 
+$('.scroll-pane').jScrollPane();
+
+$(".scroll-pane").on("scroll",function(){
+
+  var str = $(".jspPane").css('left').substring(1, $(".jspPane").css('left').length -2);
+console.log(str);
+
+  $( "#slider" ).slider( "value", str * 1.025 );
+});
+
+
 $(window).resize(function(){
   slider();
 });
 
+
+function is_touch_device() {
+
+   return !!('ontouchstart' in window) ||  navigator.userAgent.indexOf("iPad") != -1 ||  navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPod") != -1;
+}
  
+ if(is_touch_device()){
+
+  $('.scroll-pane').jScrollPane();
+  $(".scroll-pane").on("scroll",function(){
+
+    var str = $(".jspPane").css('left').substring(1, $(".jspPane").css('left').length -2);
+
+    $( "#slider" ).slider( "value", str * 1.025 );
+  });
+
+  $(".scroll-pane").css({position : "relative", zIndex : "10"});
+
+  $(window).resize(function(){
+
+  $('.scroll-pane').jScrollPane();
+
+});
+
+
+ }
 //////slider ui end
 
 //////////////////////////////////////////////////filter show

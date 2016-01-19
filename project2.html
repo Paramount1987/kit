@@ -11,11 +11,34 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style type="text/css">
+      #page-preloader {
+          position: fixed;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background: #1B75AE;
+          z-index: 100500;
+      }
 
+      #page-preloader .spinner {
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          background: url('i/spinner.gif') no-repeat 50% 50%;
+          background-size: 30px 30px;
+          margin: -16px 0 0 -16px;
+      }
+    </style>
   </head>
 <body>
+  <div id="page-preloader"><span class="spinner"></span></div>
       <header id="header">
         <a href="main.html" class="logo-link pull-left"><img src="i/logo.svg" width="53" height="53"> Компания Инженерные технологии</a>
+        <a href="main.html" class="link-arrow">на главную</a>
         <a href="#" class="pull-right" id="contact">Контакты</a>
       </header>
       <div class="contacts-hide-wrap">

@@ -352,7 +352,7 @@ tbody.collapse.in { display: table-row-group; }
 .owl-theme .owl-controls { margin-top: 10px; text-align: center; }
 
 /* Styling Next and Prev buttons */
-.owl-theme .owl-controls .owl-buttons div { color: #FFF; display: inline-block; width: 15px; height: 92px; zoom: 1; *display: inline; /*IE7 life-saver */ margin: 5px; padding: 3px 10px; font-size: 0; }
+.owl-theme .owl-controls .owl-buttons div { color: #FFF; display: inline-block; width: 15px; height: 92px; zoom: 1; *display: inline; /*IE7 life-saver */ margin: 5px; padding: 3px 25px; font-size: 0; }
 
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
@@ -386,8 +386,10 @@ tbody.collapse.in { display: table-row-group; }
 #main-owl .inner-slide.active h3 { top: 0; }
 
 .owl-theme .owl-controls { position: absolute; z-index: 4; top: 50%; left: 50%; width: 1000px; margin-left: -500px; margin-top: -45px; }
-.owl-theme .owl-controls .owl-prev { float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 0 0; }
-.owl-theme .owl-controls .owl-next { float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -50px 0; }
+.owl-theme .owl-controls .owl-prev { position: relative; left: 0; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
+.owl-theme .owl-controls .owl-prev:hover { background-position: 10px 0; }
+.owl-theme .owl-controls .owl-next { position: relative; left: 0; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
+.owl-theme .owl-controls .owl-next:hover { background-position: -36px 0; }
 
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
 html.swipebox-html.swipebox-touch { overflow: hidden !important; }
@@ -606,7 +608,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .works-type { position: relative; height: 600px; overflow: hidden; }
 
-.chema-list { position: absolute; left: 0; top: 150px; list-style-type: none; padding: 0; margin: 50px 0 30px -70px; text-align: left; white-space: nowrap; }
+.chema-list { position: absolute; left: 0; list-style-type: none; padding: 0; margin: 50px 0 30px -70px; text-align: left; white-space: nowrap; }
 .chema-list li { position: relative; display: inline-block; width: 265px; margin: 0 0 0 70px; text-align: center; vertical-align: top; color: #fff; white-space: normal; }
 .chema-list li h4 { margin: 5px 0; font-weight: normal; font-size: 16px; font-family: "MuseoSansMedium"; }
 .chema-list li p { margin: 5px 0; font-size: 14px; }
@@ -621,14 +623,63 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .chema-list li:last-child { margin-right: 250px; }
 
+/* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
+.jspContainer { overflow: hidden; position: relative; }
+
+.jspPane { position: absolute; }
+
+.jspVerticalBar { display: none; position: absolute; top: 0; right: 0; width: 8px; height: 100%; background: red; }
+
+.jspHorizontalBar { position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background: red; }
+
+.jspCap { display: none; }
+
+.jspHorizontalBar .jspCap { float: left; }
+
+.jspTrack { background: #E0DFDE; border-radius: 4px; position: relative; }
+
+.jspDrag { background: red; position: relative; top: -2px; left: 0; cursor: pointer; }
+
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag { float: left; }
+
+.jspHorizontalBar .jspTrack { height: 4px; }
+
+.jspHorizontalBar .jspDrag { height: 8px; border-radius: 5px; }
+
+.jspArrow { background: #50506d; text-indent: -20000px; display: block; cursor: pointer; padding: 0; margin: 0; }
+
+.jspArrow.jspDisabled { cursor: default; background: #80808d; }
+
+.jspVerticalBar .jspArrow { height: 16px; }
+
+.jspHorizontalBar .jspArrow { width: 16px; float: left; height: 100%; }
+
+.jspVerticalBar .jspArrow:focus { outline: none; }
+
+.jspCorner { background: #eeeef4; float: left; height: 100%; }
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner { margin: 0 -3px 0 0; }
+
+.scroll-pane { overflow: hidden; outline: 0; }
+
+.jspHorizontalBar { display: none; background: none; bottom: 30px; }
+
+.jspTrack { float: none !important; margin: 0 auto; }
+
 #header { position: absolute; z-index: 10; top: 40px; left: 50%; width: 1000px; padding: 0 10px; margin-left: -500px; }
 #header:before, #header:after { content: " "; display: table; }
 #header:after { clear: both; }
 #header .logo-link { position: relative; padding: 0 0 0 62px; font-size: 14px; line-height: 16px; width: 170px; }
 #header .logo-link img { position: absolute; z-index: 3; top: -4px; left: 0; }
 
-#contact { color: #fff; text-transform: uppercase; font-size: 15px; font-family: "MuseoSansMedium"; }
+#contact { color: #fff; text-transform: uppercase; font-size: 15px; line-height: 18px; font-family: "MuseoSansMedium"; border-bottom: 1px solid rgba(255, 255, 255, 0); -webkit-transition: border linear 0.2s; -o-transition: border linear 0.2s; transition: border linear 0.2s; }
+#contact:hover { border-bottom: 1px solid #fff; }
 #contact:hover, #contact:focus { text-decoration: none; }
+
+.link-arrow { position: absolute; z-index: 10; top: 10px; left: 50%; color: #fff; margin: -10px 0 0 -70px; padding: 0 0 0 45px; background: url("../i/icons/arrow-left.svg") no-repeat; background-size: 14px 10px; background-position: 8px center; text-transform: uppercase; font-size: 15px; line-height: 18px; -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
+.link-arrow:hover, .link-arrow:focus { color: #fff; text-decoration: none; }
+.link-arrow:hover { background-position: 0 center; }
 
 .down-page { position: absolute; z-index: 10; width: 28px; height: 70px; margin-left: -14px; left: 50%; bottom: 40px; background: url("../i/icons/mouse.svg") no-repeat top center; background-size: 28px 45px; }
 .down-page:after, .down-page:before { content: ""; position: absolute; display: block; z-index: 10; width: 100%; height: 12px; top: 50px; left: 0; background: url("../i/icons/arrow-down.svg") no-repeat top center; background-size: 28px 12px; -webkit-animation: downUp 1.8s linear infinite; -moz-animation: downUp 1.8s linear infinite; animation: downUp 1.8s linear infinite; }
@@ -650,13 +701,23 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 #contacts-hide { position: absolute; z-index: 50; top: 0; right: -710px; width: 700px; background: #4d4d4d; color: #fff; -webkit-transition: all ease 0.4s; -o-transition: all ease 0.4s; transition: all ease 0.4s; }
 
-.close-contacts { position: absolute; z-index: 10; top: 40px; right: 40px; width: 25px; height: 25px; background: url("../i/icons/x.svg") no-repeat; background-size: 25px 25px; cursor: pointer; }
+.close-contacts { position: absolute; z-index: 10; top: 40px; right: 40px; width: 23px; height: 23px; background: url("../i/icons/x.svg") no-repeat; background-size: 23px 23px; cursor: pointer; -webkit-transform: rotate(0); -ms-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); }
+.close-contacts:hover { -webkit-animation: rotate 0.3s linear forwards; -moz-animation: rotate 0.3s linear forwards; animation: rotate 0.3s linear forwards; -webkit-transform-origin: center; -moz-transform-origin: center; -ms-transform-origin: center; transform-origin: center; }
 
-.contacts-header { position: relative; height: 335px; padding: 40px 10px 0 70px; background: url("../i/map.jpg") no-repeat center; background-size: cover; }
+@-webkit-keyframes rotate { 0% { -webkit-transform: rotate(0); -ms-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); }
+  50% { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+  100% { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); } }
+@-moz-keyframes rotate { 0% { -webkit-transform: rotate(0); -ms-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); }
+  50% { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+  100% { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); } }
+@keyframes rotate { 0% { -webkit-transform: rotate(0); -ms-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); }
+  50% { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+  100% { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); } }
+.contacts-header { position: relative; height: 335px; padding: 40px 10px 0 70px; background: url("../i/map.png") no-repeat center; background-size: cover; }
 .contacts-header address { font-size: 19px; line-height: 24px; font-style: normal; font-weight: normal; }
-.contacts-header address a { color: #fff; text-decoration: none; }
-.contacts-header address a:hover { text-decoration: underline; }
-.contacts-header address .link-phone:hover, .contacts-header address .link-mail:hover { text-decoration: none; }
+.contacts-header address a { display: inline-block; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0); -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
+.contacts-header address a:hover { border-bottom: 1px solid #fff; }
+.contacts-header address .link-phone:hover, .contacts-header address .link-mail:hover { border-bottom: 1px solid rgba(255, 255, 255, 0); }
 
 .i-map { position: relative; }
 .i-map:after { content: ""; position: absolute; z-index: 10; top: -8px; right: -40px; width: 28px; height: 28px; background: url("../i/icons/map.svg") no-repeat; background-size: 28px 28px; }
@@ -674,11 +735,17 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .form-group textarea::-moz-placeholder { color: #fff; opacity: 1; }
 .form-group textarea:-ms-input-placeholder { color: #fff; }
 .form-group textarea::-webkit-input-placeholder { color: #fff; }
+.form-group textarea:focus::-moz-placeholder { color: rgba(255, 255, 255, 0.5); opacity: 1; }
+.form-group textarea:focus:-ms-input-placeholder { color: rgba(255, 255, 255, 0.5); }
+.form-group textarea:focus::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.5); }
 
 .form-control { display: block; width: 100%; background: #333; color: #fff; border: 0; outline: 0; font-size: 20px; line-height: 40px; padding: 10px 20px; }
 .form-control::-moz-placeholder { color: #fff; opacity: 1; }
 .form-control:-ms-input-placeholder { color: #fff; }
 .form-control::-webkit-input-placeholder { color: #fff; }
+.form-control:focus::-moz-placeholder { color: rgba(255, 255, 255, 0.5); opacity: 1; }
+.form-control:focus:-ms-input-placeholder { color: rgba(255, 255, 255, 0.5); }
+.form-control:focus::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.5); }
 
 .btn-submit { display: block; width: 100%; background: #a6a6a6; color: #2a2a2a; text-transform: uppercase; text-align: center; font-family: "MuseoSansMedium"; font-size: 28px; line-height: 66px; border: 0; outline: 0; -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
 .btn-submit:hover { background: #333; color: #fff; }
@@ -688,24 +755,29 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .nav-menu { background: #0E669E; z-index: 40; height: 60px; width: 100%; min-width: 1000px; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
 .nav-menu .container:before, .nav-menu .container:after { content: " "; display: table; }
 .nav-menu .container:after { clear: both; }
-.nav-menu .container .logo-link { width: 120px; float: left; font-size: 9px; padding: 0 0 0 50px; margin: 12px 150px 0 0; }
+.nav-menu .container .logo-link { width: 120px; float: left; font-size: 9px; padding: 0 0 0 50px; margin: 12px 40px 0 0; }
 .nav-menu .container .logo-link img { position: absolute; top: -4px; left: 0; }
-.nav-menu .container .contact-link { float: right; }
+.nav-menu .container .contact-link { float: right; border-bottom: 1px solid rgba(255, 255, 255, 0); -webkit-transition: border linear 0.2s; -o-transition: border linear 0.2s; transition: border linear 0.2s; }
+.nav-menu .container .contact-link:hover { border-bottom: 1px solid #fff; }
 
 .logo-link, .contact-link { position: relative; display: inline-block; color: #fff; text-transform: uppercase; font-family: "MuseoSansMedium"; }
 .logo-link:hover, .logo-link:active, .logo-link:focus, .contact-link:hover, .contact-link:active, .contact-link:focus { color: #fff; text-decoration: none; }
 
-.contact-link { font-size: 15px; line-height: 60px; }
+.contact-link { font-size: 15px; line-height: 18px; margin-top: 20px; }
 
 .menu-list { display: inline-block; margin: 0; padding: 0; list-style: none; }
 .menu-list li { display: inline-block; margin: 0 10px; vertical-align: top; }
-.menu-list li a { color: #fff; font-size: 13px; line-height: 60px; text-transform: uppercase; }
-.menu-list li a:hover { color: #fff; }
+.menu-list li a { color: #fff; font-size: 13px; line-height: 60px; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0); -webkit-transition: border linear 0.2s; -o-transition: border linear 0.2s; transition: border linear 0.2s; }
+.menu-list li a:hover { color: #fff; text-decoration: none; border-bottom: 1px solid #fff; }
 .menu-list li a:focus { text-decoration: none; font-family: "MuseoSansMedium"; }
 
 .nav-menu.affix-top { position: fixed; top: -65px; left: 0; }
 
 .nav-menu.affix { top: 0; }
+
+.action { background: #E5E5E5; }
+.action h2 { text-transform: uppercase; font-family: "MuseoSansMedium"; font-size: 50px; line-height: 55px; color: #1B75AE; text-align: center; }
+.action .container { width: 800px; }
 
 .uslugi { background: #E5E5E5; padding: 10px 0 0 0; color: #333; }
 .uslugi h2 { color: #2A2A2A; font-size: 22px; font-family: "MuseoSansMedium"; text-transform: uppercase; text-align: center; }
@@ -749,6 +821,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 @media (min-width: 1500px) { .projects-list li { width: 33.33333%; padding-bottom: 17%; } }
 .works-type { background: #1B75AE; min-width: 1000px; padding: 40px 0; color: #fff; text-align: center; }
 .works-type .title { margin: 0; text-transform: uppercase; font-family: "MuseoSansMedium"; font-size: 50px; }
+.works-type .jspContainer { height: 430px !important; }
 
 .license-block { position: relative; padding: 50px 0 40px 0; text-align: center; min-width: 1000px; color: #fff; background: url("../i/license.jpg") no-repeat; background-position: center; }
 .license-block .container { position: relative; z-index: 5; }
@@ -839,6 +912,19 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .pagination a .icon-left-open-mini:before { margin: 0 10px 0 0; }
 
 .project-info .pagination { margin-left: 40px; }
+
+.staff { position: relative; z-index: 10; min-width: 1000px; background: url("../i/staff.jpg") no-repeat center; background-size: cover; padding-bottom: 48%; }
+.staff .staff-header { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; text-align: center; }
+.staff .staff-header h2 { text-transform: uppercase; font-family: "MuseoSansBold"; font-size: 23px; line-height: 30px; color: #fff; }
+
+.staff-body { position: absolute; z-index: 12; left: 50%; bottom: 0; margin: 0 0 0 -500px; padding: 0 10px; width: 1000px; color: #fff; font-size: 0; text-align: center; }
+.staff-body ul { list-style: none; padding: 0; }
+
+.staff-left, .staff-right { width: 50%; display: inline-block; vertical-align: top; font-size: 18px; font-family: "MuseoSansRegular"; text-align: left; }
+
+.staff-left, .staff-right { padding-left: 5%; }
+
+.staff:after { content: ""; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 30%; background-image: -webkit-linear-gradient(top, rgba(27, 117, 170, 0) 0%, #1B75AA 100%); background-image: -o-linear-gradient(top, rgba(27, 117, 170, 0) 0%, #1B75AA 100%); background-image: linear-gradient(to bottom, rgba(27, 117, 170, 0) 0%, #1B75AA 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001B75AA', endColorstr='#FF1B75AA', GradientType=0); }
 
 /* Sticky footer styles----------------- */
 html { position: relative; height: 100%; }

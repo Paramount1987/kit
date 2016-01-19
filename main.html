@@ -11,9 +11,31 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style type="text/css">
+      #page-preloader {
+          position: fixed;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background: #1B75AE;
+          z-index: 100500;
+      }
 
+      #page-preloader .spinner {
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          background: url('i/spinner.gif') no-repeat 50% 50%;
+          background-size: 30px 30px;
+          margin: -16px 0 0 -16px;
+      }
+    </style>
   </head>
 <body>
+      <div id="page-preloader"><span class="spinner"></span></div>
       <header id="header">
         <a href="main.html" class="logo-link pull-left"><img src="i/logo.svg" width="53" height="53"> Компания Инженерные технологии</a>
         <a href="#" class="pull-right" id="contact">Контакты</a>
@@ -66,6 +88,14 @@
       <a href="#" class="down-page"></a>
       <div id="main-owl" class="owl-carousel">
         <div>
+          <img src="i/slide0.jpg" alt="" class="slide-img">
+          <div class="inner-slide">
+            <h2>АРХИТЕКТУРНОЕ,<br>
+                ИНЖЕНЕРНО-ТЕХНИЧЕСКОЕ ПРОЕКТИРОВАНИЕ
+            </h2>
+          </div>
+        </div>
+        <div>
           <img src="i/slide1.jpg" alt="" class="slide-img">
           <div class="inner-slide">
             <h2>ДОСТАТОЧНЫЙ ОПЫТ
@@ -92,17 +122,31 @@
           <div class="container">
             <a href="#" class="logo-link"><img src="i/logo.svg" width="42" height="42"> Компания Инженерные технологии</a>
             <ul class="menu-list">
-              <li><a href="#" id="link1" data-class="uslugi">услуги</a></li>
+              <li><a href="#" id="link1" data-class="action">деятельность</a></li>
               <li><a href="#" id="link2" data-class="projects-header">проекты</a></li>
               <li><a href="#" id="link3" data-class="works-type">схема работ</a></li>
-              <li><a href="#" id="link4" data-class="license-block">лицензии и сертификаты</a></li>
+              <li><a href="#" id="link4" data-class="staff">кадровый потенциал</a></li>
+              <li><a href="#" id="link5" data-class="license-block">лицензии и сертификаты</a></li>
             </ul>
             <a href="#" class="contact-link">контакты</a>
           </div> <!-- end container -->
         </div> 
+        <div class="action">
+          <div class="container">
+            <h2>деятельность</h2>
+            <p>В компетенции «Компания Инженерные Технологии»  входит архитектурное и инженерное проектирование объектов гражданского и промышленного назначения.
+            </p>
+            <p>
+              Мы создаем проекты, предлагая высокое качество, оптимальные решения и сроки их реализации, гибкую ценовую политику и индивидуальный подход.
+            </p>
+            <p>
+              Выбирая «Компания Инженерные Технологии», Вы делаете выбор в пользу опыта, качества и профессионализма!
+            </p>
+          </div>
+        </div>
         <div class="uslugi">
           <div class="container">
-            <h2>Услуги</h2>
+            <h2>наши услуги</h2>
             <ul class="uslugi-list">
               <li class="left-b-no">Генеральное <br>проектирование</li>
               <li class="padding-l">Разработка проектной <br>документации (стадии П и Р)</li>
@@ -157,58 +201,82 @@
         </div>
         <div class="works-type">
           <h3 class="title">Схема работ</h3>
-            <ul class="chema-list">
-              <li>
-                <div class="img-chema"><img src="i/icons/shema1.svg" width="110" height="110"></div>
-                <h4>Обследование объекта</h4>
-                <p>
-                  Оценка состояния объекта, обмерочные чертежи, заполнение паспорта объекта.
-                </p>
-              </li>
-              <li>
-                <div class="img-chema"><img src="i/icons/shema2.svg" width="110" height="110"></div>
-                <h4>Коммерческое предложение</h4>
-                <p>
-                  Подготовка предложения по перечню и стоимости работ, рекомендации по оборудованию и материалам.
-                </p>
-              </li>
-              <li>
-                <div class="img-chema"><img src="i/icons/shema3.svg" width="110" height="110"></div>
-                <h4>Техническое задание</h4>
-                <p>
-                  Оформление последовательной структуры с описанием стадий и этапов строительства, а также технических средств. 
-                </p>
-              </li>
-              <li>
-                <div class="img-chema"><img src="i/icons/shema4.svg" width="110" height="110"></div>
-                <h4>Проектные работы (стадия П).</h4>
-                <p>
-                  Разработка принципиальных проектных решений с целью согласования в экспертизе. Определение стоимости реализации объекта.
-                </p>
-              </li>
-              <li>
-                <div class="img-chema"><img src="i/icons/shema5.svg" width="110" height="110"></div>
-                <h4>Согласование в контролирующих организациях (экспертиза). </h4>
-                <p>
-                  Предоставление интересов заказчика в надзорных органах с целью получения положительного заключения. Получение разрешения на строительство.
-                </p>
-              </li>
-              <li>
-                <div class="img-chema"><img src="i/icons/shema6.svg" width="110" height="110"></div>
-                <h4>Рабочая документация (стадия Р). </h4>
-                <p>
-                  Изготовление рабочих чертежей, схем, спецификаций для выполнения СМР.
-                </p>
-              </li>
-              <li>
-                <div class="img-chema"><img src="i/icons/shema7.svg" width="110" height="110"></div>
-                <h4>Авторский надзор.</h4>
-                <p>
-                  Контроль соответствия фактического состояния с проектной документацией, разработка предложений по устранению выявленных нарушений.
-                </p>
-              </li>
-            </ul>
+            <div class="scroll-pane">
+              <ul class="chema-list">
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema1.svg" width="110" height="110"></div>
+                  <h4>Обследование объекта</h4>
+                  <p>
+                    Оценка состояния объекта, обмерочные чертежи, заполнение паспорта объекта.
+                  </p>
+                </li>
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema2.svg" width="110" height="110"></div>
+                  <h4>Коммерческое предложение</h4>
+                  <p>
+                    Подготовка предложения по перечню и стоимости работ, рекомендации по оборудованию и материалам.
+                  </p>
+                </li>
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema3.svg" width="110" height="110"></div>
+                  <h4>Техническое задание</h4>
+                  <p>
+                    Оформление последовательной структуры с описанием стадий и этапов строительства, а также технических средств. 
+                  </p>
+                </li>
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema4.svg" width="110" height="110"></div>
+                  <h4>Проектные работы (стадия П).</h4>
+                  <p>
+                    Разработка принципиальных проектных решений с целью согласования в экспертизе. Определение стоимости реализации объекта.
+                  </p>
+                </li>
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema5.svg" width="110" height="110"></div>
+                  <h4>Согласование в контролирующих организациях (экспертиза). </h4>
+                  <p>
+                    Предоставление интересов заказчика в надзорных органах с целью получения положительного заключения. Получение разрешения на строительство.
+                  </p>
+                </li>
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema6.svg" width="110" height="110"></div>
+                  <h4>Рабочая документация (стадия Р). </h4>
+                  <p>
+                    Изготовление рабочих чертежей, схем, спецификаций для выполнения СМР.
+                  </p>
+                </li>
+                <li>
+                  <div class="img-chema"><img src="i/icons/shema7.svg" width="110" height="110"></div>
+                  <h4>Авторский надзор.</h4>
+                  <p>
+                    Контроль соответствия фактического состояния с проектной документацией, разработка предложений по устранению выявленных нарушений.
+                  </p>
+                </li>
+              </ul>
+            </div>  
           <div id="slider"></div>
+        </div>
+        <div class="staff">
+            <div class="staff-header">
+              <h2>кадровый потенциал</h2>
+            </div>  
+            <div class="staff-body">
+              <div class="staff-left">
+                <ul>
+                  <li>Служба главного инженера проекта: 3 чел.</li>
+                  <li>Главный специалист (эксперт): 3 человека</li>
+                  <li>Руководитель отдела: 3 человека</li>
+                  <li>Руководитель группы: 9 человек</li>
+                </ul>
+              </div>
+              <div class="staff-right">
+                <ul>
+                  <li>Ведущие инженеры: 6 человек</li>
+                  <li>Инженеры-проектанты:  42 человека</li>
+                  <li>Вспомогательные службы: 9 человек</li>
+                </ul>
+              </div>
+            </div>
         </div>
         <div class="license-block">
           <div class="container">
