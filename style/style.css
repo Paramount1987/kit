@@ -385,10 +385,10 @@ tbody.collapse.in { display: table-row-group; }
 #main-owl .inner-slide.active h2 { top: 0; }
 #main-owl .inner-slide.active h3 { top: 0; }
 
-.owl-theme .owl-controls { position: absolute; z-index: 4; top: 50%; left: 50%; width: 1000px; margin-left: -500px; margin-top: -45px; }
-.owl-theme .owl-controls .owl-prev { position: relative; left: 0; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
+.owl-theme .owl-controls { position: absolute; z-index: 4; top: 50%; left: 50%; width: 1000px; margin-left: -500px; margin-top: -90px; }
+.owl-theme .owl-controls .owl-prev { position: relative; left: -40px; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
 .owl-theme .owl-controls .owl-prev:hover { background-position: 10px 0; }
-.owl-theme .owl-controls .owl-next { position: relative; left: 0; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
+.owl-theme .owl-controls .owl-next { position: relative; left: 40px; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
 .owl-theme .owl-controls .owl-next:hover { background-position: -36px 0; }
 
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
@@ -418,21 +418,21 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 #swipebox-bottom-bar, #swipebox-top-bar { -webkit-transition: 0.5s; transition: 0.5s; position: absolute; left: 0; z-index: 999; height: 0; width: 100%; }
 
-#swipebox-bottom-bar { top: 50%; margin-top: -25px; }
+#swipebox-bottom-bar { top: 50%; margin-top: -45px; }
 
 #swipebox-top-bar { top: -50px; }
 
 #swipebox-title { display: block; width: 100%; text-align: center; }
 
-#swipebox-prev, #swipebox-next, #swipebox-close { background-image: url(../i/icons/icons.png); background-repeat: no-repeat; border: none !important; text-decoration: none !important; cursor: pointer; width: 50px; height: 50px; top: 0; }
+#swipebox-prev, #swipebox-next, #swipebox-close { border: none !important; text-decoration: none !important; cursor: pointer; top: 0; }
 
 #swipebox-arrows { display: block; margin: 0 auto; width: 100%; height: 0; }
 
-#swipebox-prev { background-position: -32px 13px; float: left; }
+#swipebox-prev { width: 15px; height: 92px; padding: 3px 14px; background-image: url("../i/icons/arrows.svg") !important; background-size: 70px 90px; background-position: 1px 0; float: left; }
 
-#swipebox-next { background-position: -78px 13px; float: right; }
+#swipebox-next { width: 15px; height: 92px; padding: 3px 14px; background-image: url("../i/icons/arrows.svg") !important; background-size: 70px 90px; background-position: -43px 0; float: right; }
 
-#swipebox-close { top: 0; right: 0; position: absolute; z-index: 9999; background-position: 15px 12px; }
+#swipebox-close { top: 10px; right: 15px; position: absolute; z-index: 9999; width: 23px; height: 23px; background-image: url("../i/icons/x.svg") !important; background-size: 23px 23px; }
 
 .swipebox-no-close-button #swipebox-close { display: none; }
 
@@ -464,7 +464,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 @keyframes leftSpring { 0% { left: 0; }
   50% { left: 30px; }
   100% { left: 0; } }
-@media screen and (min-width: 800px) { #swipebox-close { right: 10px; }
+@media screen and (min-width: 800px) { #swipebox-close { right: 30px; }
   #swipebox-arrows { width: 95%; } }
 /* Skin 
 --------------------------*/
