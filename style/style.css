@@ -386,9 +386,9 @@ tbody.collapse.in { display: table-row-group; }
 #main-owl .inner-slide.active h3 { top: 0; }
 
 .owl-theme .owl-controls { position: absolute; z-index: 4; top: 50%; left: 50%; width: 1000px; margin-left: -500px; margin-top: -45px; }
-.owl-theme .owl-controls .owl-prev { position: relative; left: 0; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
+.owl-theme .owl-controls .owl-prev { position: relative; left: 0; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
 .owl-theme .owl-controls .owl-prev:hover { background-position: 10px 0; }
-.owl-theme .owl-controls .owl-next { position: relative; left: 0; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
+.owl-theme .owl-controls .owl-next { position: relative; left: 0; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
 .owl-theme .owl-controls .owl-next:hover { background-position: -36px 0; }
 
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
@@ -906,7 +906,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .pagination { list-style-type: none; margin: 30px 0; padding: 0; }
 .pagination:before, .pagination:after { content: " "; display: table; }
 .pagination:after { clear: both; }
-.pagination a { display: inline-block; width: 250px; text-align: center; border: 1px solid #1B75AE; color: #1B75AE; border-radius: 30px; font-size: 16px; line-height: 42px; text-transform: uppercase; font-family: "MuseoSansBold"; -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
+.pagination a { display: inline-block; width: 250px; text-align: center; border: 1px solid #1B75AE; color: #1B75AE; border-radius: 30px; font-size: 16px; line-height: 50px; text-transform: uppercase; font-family: "MuseoSansBold"; -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
 .pagination a:hover { color: #fff; background: #1B75AE; text-decoration: none; }
 .pagination a .icon-right-open-mini:before, .pagination a .icon-left-open-mini:before { position: relative; top: 7px; font-size: 40px; line-height: 40px; margin: 0 0 0 10px; width: auto; }
 .pagination a .icon-left-open-mini:before { margin: 0 10px 0 0; }
