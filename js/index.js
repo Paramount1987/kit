@@ -30,6 +30,21 @@ $("#main-owl").owlCarousel({
 
   // }
 });
+//////////////////////////nav menu
+setTimeout(function(){
+  $(window).scroll(function(){
+    var scrollTop = $(window).scrollTop();
+    if(scrollTop > 0){
+      $('.nav-menu').addClass("scrolled");
+    }else{
+      $('.nav-menu').removeClass("scrolled");
+    }
+     
+  }); 
+}, 10); 
+
+
+
 ////////////////////////////////////////////end
 
 $('.bottom-page').click(function(){ 

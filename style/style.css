@@ -379,16 +379,16 @@ tbody.collapse.in { display: table-row-group; }
 #main-owl .slide-img { position: absolute; z-index: 1; top: 50%; left: 50%; min-width: 100%; min-height: 100%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 #main-owl .inner-slide { position: absolute; z-index: 3; width: 1000px; top: 50%; left: 50%; text-align: center; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-#main-owl .inner-slide h2 { position: relative; top: -40px; margin: 10px 0; font-family: "MuseoSansBold"; font-size: 54px; line-height: 60px; color: #fff; text-transform: uppercase; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
-#main-owl .inner-slide h3 { position: relative; top: -40px; margin: 10px 0; font-size: 20px; font-weight: normal; color: #fff; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
+#main-owl .inner-slide h2 { position: relative; top: -40px; margin: 10px 0; font-family: "MuseoSansBold"; font-size: 50px; line-height: 60px; color: #fff; text-transform: uppercase; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
+#main-owl .inner-slide h3 { position: relative; top: -40px; margin: 10px 0 10px 100px; width: 800px; font-size: 20px; font-weight: normal; color: #fff; -webkit-transition: all linear 0.8s; -o-transition: all linear 0.8s; transition: all linear 0.8s; }
 
 #main-owl .inner-slide.active h2 { top: 0; }
 #main-owl .inner-slide.active h3 { top: 0; }
 
 .owl-theme .owl-controls { position: absolute; z-index: 4; top: 50%; left: 50%; width: 1000px; margin-left: -500px; margin-top: -90px; }
-.owl-theme .owl-controls .owl-prev { position: relative; left: -40px; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
+.owl-theme .owl-controls .owl-prev { position: relative; left: -30px; float: left; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: 17px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
 .owl-theme .owl-controls .owl-prev:hover { background-position: 10px 0; }
-.owl-theme .owl-controls .owl-next { position: relative; left: 40px; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
+.owl-theme .owl-controls .owl-next { position: relative; left: 30px; float: right; background: url("../i/icons/arrows.svg") no-repeat; background-size: 70px 90px; background-position: -43px 0; -webkit-transition: all linear 0.15s; -o-transition: all linear 0.15s; transition: all linear 0.15s; }
 .owl-theme .owl-controls .owl-next:hover { background-position: -36px 0; }
 
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
@@ -752,7 +752,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 .link-map { position: absolute; z-index: 10; top: 135px; left: 295px; width: 60px; height: 70px; }
 
-.nav-menu { background: #0E669E; z-index: 40; height: 60px; width: 100%; min-width: 1000px; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
+.nav-menu { position: fixed; top: 0; left: 0; background: rgba(14, 102, 158, 0); z-index: 40; height: 60px; width: 100%; min-width: 1000px; -webkit-transition: all linear 0.3s; -o-transition: all linear 0.3s; transition: all linear 0.3s; }
 .nav-menu .container:before, .nav-menu .container:after { content: " "; display: table; }
 .nav-menu .container:after { clear: both; }
 .nav-menu .container .logo-link { width: 120px; float: left; font-size: 9px; padding: 0 0 0 50px; margin: 12px 40px 0 0; }
@@ -760,10 +760,12 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 .nav-menu .container .contact-link { float: right; border-bottom: 1px solid rgba(255, 255, 255, 0); -webkit-transition: border linear 0.2s; -o-transition: border linear 0.2s; transition: border linear 0.2s; }
 .nav-menu .container .contact-link:hover { border-bottom: 1px solid #fff; }
 
+.nav-menu.scrolled { background: #0e669e; }
+
 .logo-link, .contact-link { position: relative; display: inline-block; color: #fff; text-transform: uppercase; font-family: "MuseoSansMedium"; }
 .logo-link:hover, .logo-link:active, .logo-link:focus, .contact-link:hover, .contact-link:active, .contact-link:focus { color: #fff; text-decoration: none; }
 
-.contact-link { font-size: 15px; line-height: 18px; margin-top: 20px; }
+.contact-link { font-size: 15px; line-height: 18px; margin-top: 21px; }
 
 .menu-list { display: inline-block; margin: 0; padding: 0; list-style: none; }
 .menu-list li { display: inline-block; margin: 0 10px; vertical-align: top; }
