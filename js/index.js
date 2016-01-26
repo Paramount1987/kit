@@ -5,18 +5,13 @@ $(window).on('load', function () {
     spinner.fadeOut();
     preloader.fadeOut('slow');
 
-});
-
-
-$(document).ready(function(){
-
 /////////////////////////////////////////carousel
 $("#main-owl").owlCarousel({
-	theme : "owl-theme",
-	items: 1,
-	singleItem: true,
-	pagination: false,
-	navigation: true,
+  theme : "owl-theme",
+  items: 1,
+  singleItem: true,
+  pagination: false,
+  navigation: true,
   autoPlay: true,
   transitionStyle : "fadeUp"
   // afterAction: function(elem){
@@ -30,6 +25,13 @@ $("#main-owl").owlCarousel({
 
   // }
 });
+
+});
+
+
+$(document).ready(function(){
+
+
 //////////////////////////nav menu
 setTimeout(function(){
   $(window).scroll(function(){
